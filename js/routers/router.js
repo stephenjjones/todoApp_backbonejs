@@ -4,6 +4,7 @@ var Workspace = Backbone.Router.extend({
     },
 
     setFilter: function( param ) {
+        window.app.TodoFilter = param || '';
         window.app.Todos.trigger('filter');
     }
 });

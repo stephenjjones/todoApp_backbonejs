@@ -59,6 +59,8 @@ app.TodoView = Backbone.View.extend({
 
         if ( value ) {
             this.model.save({ title: value });
+        } else {
+            this.clear();
         }
 
         this.$el.removeClass('editing');
